@@ -1,0 +1,14 @@
+.footer {
+  /* background-color: #0f715f; Match header color or use a different color */
+  text-align: center; /* Center the text */
+  padding: 30px 0; /* Space around the text */
+  position: relative; /* For positioning if needed */
+  bottom: 0; /* Position at the bottom of the page */
+  width: 100%; /* Full width */
+  
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 0.9em; /* Adjust font size */
+}
