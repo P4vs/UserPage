@@ -39,15 +39,95 @@ body {
   padding: 10px; /* Space around the icon */
 }
 
+.messaging {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Main messaging box */
+.my-messages {
+  position: absolute;
+  right: 100px;
+  top: 50px; /* Adjust as needed */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+  border: 1px solid rgba(200, 200, 200, 0.5); /* Lighter border */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); 
+  z-index: 1;
+  padding: 20px;
+  width: 300px; 
+  max-height: 400px; 
+  overflow-y: auto; 
+}
+
+/* Header of the message box */
+.head-text {
+  font-weight: bold;
+  font-size: 1.2em; /* Larger font size */
+  color: #333; /* Darker color for contrast */
+  margin-bottom: 15px; /* Spacing below the header */
+}
+
+/* Container for messages */
+.messages-list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual message styles */
+.message-item {
+  background: rgba(240, 240, 240, 0.8); /* Light gray background */
+  border-radius: 5px;
+  margin-bottom: 10px; /* Spacing between messages */
+  padding: 10px;
+  transition: background 0.3s; /* Smooth background change */
+  border-left: 4px solid #007bff; /* Left border for emphasis */
+}
+
+/* Hover effect for messages */
+.message-item:hover {
+  background: rgba(220, 220, 220, 0.9); /* Darken on hover */
+}
+
+/* Sender name */
+.message-item h4 {
+  margin: 0;
+  font-size: 1em; /* Regular size for sender name */
+  color: #007bff; /* Brand color for sender name */
+}
+
+/* Message subject */
+.message-item p {
+  margin: 5px 0;
+  font-weight: bold; 
+  color: #333; 
+}
+
+
+.message-item p:last-of-type {
+  margin: 0; 
+  color: #666; 
+}
+
+
+.message-time {
+  font-size: 0.8em; 
+  color: #888; 
+  text-align: right; 
+}
+
+
+
 .user-icon {
   font-size: 24px;
-  color: white; /* Adjust icon size */
+  color: white; 
 }
 
 .login-dropdown {
-  position: absolute; /* Position it below the user icon */
+  position: absolute;
   right: 0;
-  top: 50px; /* Adjust as needed */
+  top: 70px; 
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -56,19 +136,37 @@ body {
 }
 
 .login-button {
-  display: block; /* Stack buttons */
-  width: 100%; /* Full width */
-  background-color: #4CAF50; /* Green background */
+  display: block;
+  width: 100%; 
+  background-color: #4CAF50;
   color: white;
   border: none;
   padding: 10px;
-  text-align: left; /* Align text to the left */
+  text-align: left;
   cursor: pointer;
 }
 
 .login-button:hover {
   background-color: #034a06; 
 }
+
+/* Badge for unread messages */
+
+.badge {
+  position: absolute;
+  top: -5px; /* Adjust as needed */
+  right: -10px; /* Adjust as needed */
+  background-color: red; /* Background color */
+  color: white; /* Text color */
+  border-radius: 50%; /* Circular shape */
+  padding: 5px 8px; /* Padding for size */
+  font-size: 0.8em; /* Font size */
+  font-weight: bold; /* Bold text */
+  min-width: 20px; /* Minimum width */
+  text-align: center; /* Center text */
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -77,6 +175,10 @@ body {
   }
   .header-text h1{
     display: none;
+  }
+
+  .my-messages{
+    right: 50px;
   }
 
   .header-text p{

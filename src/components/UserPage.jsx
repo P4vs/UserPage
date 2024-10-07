@@ -4,6 +4,7 @@ import Pic2 from "../assets/pic2.jpg";
 import "../Css/UserPage.css";
 import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
+// import Messaging from "../components/Messaging";
 
 function UserPage(){
 
@@ -34,29 +35,6 @@ function UserPage(){
             </p>
           </div>
         </div>
-        {/* <div className="location">
-          <span>
-            <i className="ri-map-pin-2-fill"></i>
-          </span>
-          OUR LOCATION
-        </div> */}
-        {/* <div className="socials">
-          <span>
-            <a href="#">
-              <i className="ri-facebook-fill"></i>
-            </a>
-          </span>
-          <span>
-            <a href="#">
-              <i className="ri-instagram-line"></i>
-            </a>
-          </span>
-          <span>
-            <a href="#">
-              <i className="ri-twitter-fill"></i>
-            </a>
-          </span>
-        </div> */}
       </div>
       <Footer/>
     </>
